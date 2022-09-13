@@ -6,6 +6,14 @@
 <head>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css"/>
 <title>영화정보 관리</title>
+<script type="text/javascript">
+	function deleteConfirm(id){
+		if(confirm("해당 영화를 삭제합니다!!") == true)
+			location.href ="./processDeleteMovie?id=" + id;
+		else
+			return;
+	}
+</script>
 <style>
 	.Mboard{
 		width: 1300px;
@@ -37,7 +45,7 @@
 				<div>
 					<a href="./updateMovie.jsp?id=<%=rs.getString("movie_id") %>" 
 						class="btn btn-success" role="button"> 수정 &raquo;</a>
-					<a href="#"  
+					<a href="#"  onclick="deleteConfirm('<%=rs.getString("movie_id") %>')"
 						class="btn btn-danger" role="button">삭제 &raquo;</a>	
 				</div>
 			</div>
