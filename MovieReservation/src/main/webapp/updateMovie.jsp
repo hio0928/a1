@@ -25,7 +25,7 @@
 				
 				if(rs.next()){
 			%>
-			<form name="newMovie" action="processUpdateMovie.jsp" 
+			<form name="newMovie" action="./processUpdateMovie.jsp" 
 			class="form-horizontal" method="post" enctype="multipart/form-data">
 			<div class="form-group row mt-5">
 				<label class="col-sm-2">영화 코드</label>

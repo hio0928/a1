@@ -15,6 +15,8 @@
 			<div>
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" 
+					href="./editMovie.jsp">영화 수정</a></li>
+					<li class="nav-item"><a class="nav-link" 
 					href="<c:url value="/BoardListAction.do?pageNum=1"/>">게시판</a></li>
 				</ul>
 			</div>

@@ -9,7 +9,6 @@
 	request.setCharacterEncoding("utf-8");
 
 	String realFolder = getServletContext().getRealPath("/") + "posterImage";
-	System.out.println("경로확인 ---->" + realFolder);
 	
 	int maxSize = 50 * 1024 * 1024;
 	String encType = "utf-8";
@@ -24,7 +23,7 @@
 	String country = multi.getParameter("country");
 	String runningtime_m = multi.getParameter("runningtime_m");
 	
-	Integer runnigtime = Integer.valueOf(runningtime_m);
+	Integer runningtime = Integer.valueOf(runningtime_m);
 	
 	Enumeration files = multi.getFileNames();
 	String fname = (String)files.nextElement();
@@ -39,7 +38,7 @@
 	pstmt.setString(3,director);
 	pstmt.setString(4,actor);
 	pstmt.setString(5,country);
-	pstmt.setInt(6,runnigtime);
+	pstmt.setInt(6,runningtime);
 	pstmt.setString(7,imgfile_name);
 	pstmt.execute();
 	
