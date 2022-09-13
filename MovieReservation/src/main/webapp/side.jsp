@@ -3,9 +3,9 @@
 
 <style>
 	.side {
-		float : right;
-		width : 200px;
-		height : 600px;
+		float : right; 
+		width : 250px;
+		height : 80%;
  		background: #DCEBFF;
 	}
 </style>
