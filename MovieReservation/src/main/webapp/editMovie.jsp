@@ -9,7 +9,7 @@
 <script type="text/javascript">
 	function deleteConfirm(id){
 		if(confirm("해당 영화를 삭제합니다!!") == true)
-			location.href ="./processDeleteMovie?id=" + id;
+			location.href ="./processDeleteMovie.jsp?id=" + id;
 		else
 			return;
 	}

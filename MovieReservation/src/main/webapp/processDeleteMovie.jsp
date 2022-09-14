@@ -9,7 +9,7 @@
 	rs = null;
 	
 	
-	String sql = "select * from product";
+	String sql = "select * from movie";
 	pstmt = conn.prepareStatement(sql);
 	rs = pstmt.executeQuery();
 	
