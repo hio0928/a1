@@ -11,4 +11,4 @@
 </style>
 
 
-<div class="side mt-5 mr-5">11</div>
+<div class="side mt-5 mr-5">로그인 창 or 로그인된 정보</div>

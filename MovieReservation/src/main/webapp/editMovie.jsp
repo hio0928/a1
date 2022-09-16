@@ -48,6 +48,10 @@
 					<a href="#"  onclick="deleteConfirm('<%=rs.getString("movie_id") %>')"
 						class="btn btn-danger" role="button">삭제 &raquo;</a>	
 				</div>
+				<div>
+					<a href="./movieSchedule.jsp?id=<%=rs.getString("movie_id") %>" 
+						class="btn btn-primary mt-1" role="button"> 상영일정 생성 &raquo;</a>
+				</div>
 			</div>
 			<%
 				}

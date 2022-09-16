@@ -1,15 +1,17 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 
-
 <html>
 <head>
-<title>영화 정보</title>
+<title>영화 예약</title>
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css"/>
 </head>
 <body>
 	<jsp:include page="menu.jsp" />
 	<jsp:include page="side.jsp" />
 	<%@ include file="dbconn.jsp"%>
+	<div class="container">
+		<h3>영화 예약</h3>
+	</div>
 	<%
 		String id = request.getParameter("id");
 		String sql = "select * from movie where movie_id = '"+id+"'";
@@ -21,20 +23,9 @@
 	%>
 	<div class="mt-5" style="margin-left: 200px">
 		<h4> <%=rs.getString("title")%></h4>
-		<div class="row">
 			<div >
-				<img src="./posterImage/<%=rs.getString("imgfile_name")%>" style="height: 400px">
+				<img src="./posterImage/<%=rs.getString("imgfile_name")%>" style="height: 300px">
 			</div>
-			<div class="col-md-6 ml-3">
-			<p><b>졔목 : </b><%=rs.getString("title")%></p>
-			<p><b>감독 : </b><%=rs.getString("director")%></p>
-			<p><b>배우 : </b><%=rs.getString("actor")%></p>
-			<p><b>국가 : </b><%=rs.getString("country")%></p>
-			<p><b>상영시간 : </b><%=rs.getString("runningtime_m")%>분</p>
-			</div>
-		</div>
-		<a href="./ticketReservation.jsp?id=<%=rs.getString("movie_id") %>" 
-						class="btn btn-primary mt-1" role="button"> 예약하기 &raquo;</a>
 	</div>
 	<%
 		}
